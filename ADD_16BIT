@@ -1,0 +1,13 @@
+
+;<Addition of two 16-bit numbers>
+LHLD 0000H
+XCHG
+LHLD 0002H
+MOV A,E
+ADD L
+MOV L,A
+MOV A,D
+ADC H
+MOV H,A
+SHLD 0004H
+hlt

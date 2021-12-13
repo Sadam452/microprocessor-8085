@@ -1,0 +1,17 @@
+
+;<Smmalest of n numbers>
+
+LXI H,0000H
+MOV C,M
+INX H
+MOV A,M
+DCR C
+again: INX H
+CMP M
+JC next
+MOV A,M
+next: DCR C
+JNZ again
+INX H
+MOV M,A
+hlt
